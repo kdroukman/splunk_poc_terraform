@@ -1,4 +1,4 @@
-# Splunk POC Jumpstart
+# Splunk POC Detectors with Terraform
 **Requires Terraform (minimum) v0.14**
 
 ## Clone this repository:
