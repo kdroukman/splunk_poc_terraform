@@ -61,19 +61,6 @@ See [`variables.tf`](https://github.com/kdroukman/splunk_poc_terraform/blob/main
 You may also wish to create different Workspaces and different alerting conditions for different services. 
 This example script provides you with the `name_prefix` variable which you can use to prefix your detector with respective service, platform or team name. 
 
-## Reference
-
-You can read more about Splunk Observability Terraform Provider here:
-
-Main page: 
-[Splunk Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
-
-Detectors: 
-[Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector),
-[Splunk Detector Documentation](https://docs.signalfx.com/en/latest/detect-alert/alert-condition-reference/index.html)
-
-_Note that the provider still references signalfx as this capability from acquired from SignalFx by Splunk_
-
 ## How to use filters
 
 [filter() Documentation](https://dev.splunk.com/observability/docs/signalflow/functions/filter_function/)
@@ -87,4 +74,37 @@ Filter on a specific environment and service
 Filter on a specific environment and service, but exclude some endpoints
 ```-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and not filter('sf_operation','*/healthz')"```
 
+The above examples use *dimensions* related to APM metrics such as `spans.count` and `spans.duration`. The are dimensionilized by 
+* sf_environment
+* sf_service
+* sf_operation
+* sf_kind 
+* sf_error
+* sf_httpMethod
 
+And addtional dimensions on request.
+
+Other metrics are dimensionalized differently - for exmaple JVM metrics use:
+* service
+* process_pid
+* host.name
+* deployment_environment
+* etc
+
+You can use the metrics finder to explore properties and dimensions associated with specific metrics. 
+
+Read more about Splunk Observability data model [here](https://dev.splunk.com/observability/docs/datamodel/metrics_metadata)
+
+
+## Reference
+
+You can read more about Splunk Observability Terraform Provider here:
+
+Main page: 
+[Splunk Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
+
+Detectors: 
+[Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector),
+[Splunk Detector Documentation](https://docs.signalfx.com/en/latest/detect-alert/alert-condition-reference/index.html)
+
+_Note that the provider still references signalfx as this capability from acquired from SignalFx by Splunk_
