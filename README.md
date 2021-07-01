@@ -65,15 +65,18 @@ This example script provides you with the `name_prefix` variable which you can u
 
 You can read more about Splunk Observability Terraform Provider here:
 
-Main page: [Splunk Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
+Main page: 
+[Splunk Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
 
-Detectors: [Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector)
+Detectors: 
+[Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector)
+[Splunk Detector Documentation](https://docs.signalfx.com/en/latest/detect-alert/alert-condition-reference/index.html)
 
 _Note that the provider still references signalfx as this capability from acquired from SignalFx by Splunk_
 
 ## How to use filters
 
-[Dev docs on filter()](https://dev.splunk.com/observability/docs/signalflow/functions/filter_function/)
+[filter() Documentation](https://dev.splunk.com/observability/docs/signalflow/functions/filter_function/)
 
 Notice that detectors use a filter() to select what to alert on. In these scripts the default filter is a *catch-all* one.
 Bellow are some examples of how you can modify it:
