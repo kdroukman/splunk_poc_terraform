@@ -69,7 +69,7 @@ Main page:
 [Splunk Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
 
 Detectors: 
-[Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector)
+[Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector),
 [Splunk Detector Documentation](https://docs.signalfx.com/en/latest/detect-alert/alert-condition-reference/index.html)
 
 _Note that the provider still references signalfx as this capability from acquired from SignalFx by Splunk_
