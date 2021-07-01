@@ -82,9 +82,9 @@ Notice that detectors use a filter() to select what to alert on. In these script
 Bellow are some examples of how you can modify it:
 
 Filter on a specific environment and service
-`-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and filter('sf_operation','*')"`
+```-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and filter('sf_operation','*')"```
 
 Filter on a specific environment and service, but exclude some endpoints
-`-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and not filter('sf_operation','*/healthz')"`
+```-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and not filter('sf_operation','*/healthz')"```
 
 
