@@ -95,6 +95,12 @@ You can use the [Metrics Finder](https://app.us1.signalfx.com/#/metrics) to expl
 
 Read more about Splunk Observability data model [here](https://dev.splunk.com/observability/docs/datamodel/metrics_metadata)
 
+## SignalFlow Analytics Language
+As you notice the program text within the resources is using Python-like syntax to create detectors. 
+This is the program for [SignalFlow analytics engine](https://docs.signalfx.com/en/latest/getting-started/concepts/analytics-signalflow.html) that runs computations at the heart of Splunk Observability metrics plaform. 
+
+In the UI you can view it as you create charts and detectors by clicking on the SignalFlow link, usually situation to the top right of your editor. In Terraform scripts we use the base program text instead. 
+
 
 ## Reference
 
