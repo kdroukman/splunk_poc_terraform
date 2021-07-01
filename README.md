@@ -56,7 +56,7 @@ terraform apply -var="access_token=abc123" -var="realm=us1" -target=signalfx_det
 ```
 
 The above will modify the sudden change alert for error rate growth to the respective settings.
-See [`variables.tf`](https://github.com/kdroukman/splunk_poc_terraform/blob/main/variables.tf) for default values and variables that can be set, and [`main.tf`](https://github.com/kdroukman/splunk_poc_terraform/blob/main/main.tf) to understand how these are used within the Detectors. You can set those inline, or create a `.tfvars` file to manage your configuration. 
+See [`variables.tf`](https://github.com/kdroukman/splunk_poc_terraform/blob/main/variables.tf) for default values and variables that can be set, and [`main.tf`](https://github.com/kdroukman/splunk_poc_terraform/blob/main/main.tf) to understand how these are used within the Detectors. You can set those inline, or create a [`.tfvars`](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files) file to manage your configuration. 
 
 You may also wish to create different Workspaces and different alerting conditions for different services. 
 This example script provides you with the `name_prefix` variable which you can use to prefix your detector with respective service, platform or team name. 
