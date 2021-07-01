@@ -91,7 +91,7 @@ Other metrics are dimensionalized differently - for exmaple JVM metrics use:
 * deployment_environment
 * etc
 
-You can use the metrics finder to explore properties and dimensions associated with specific metrics. 
+You can use the [Metrics Finder](https://app.us1.signalfx.com/#/metrics) to explore properties and dimensions associated with specific metrics. 
 
 Read more about Splunk Observability data model [here](https://dev.splunk.com/observability/docs/datamodel/metrics_metadata)
 
