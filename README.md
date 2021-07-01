@@ -48,7 +48,7 @@ $ terraform destroy -var="access_token=abc123" -var="realm=us1"
 # Programmatically changing detector settings
 
 This script contains a number of different detectors. 
-You can set an additional set a number of variables specific to each detector.
+You can programmatically modify variables specific to each detector, or even change the filter to set up detectors for specific services and operations.
 This can be used to modify your detector conditions. For example
 
 ```
@@ -70,4 +70,18 @@ Main page: [Splunk Terraform Provider](https://registry.terraform.io/providers/s
 Detectors: [Splunk Terraform Provider Detector resource](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector)
 
 _Note that the provider still references signalfx as this capability from acquired from SignalFx by Splunk_
+
+## How to use filters
+
+[Dev docs on filter()](https://dev.splunk.com/observability/docs/signalflow/functions/filter_function/)
+
+Notice that detectors use a filter() to select what to alert on. In these scripts the default filter is a *catch-all* one.
+Bellow are some examples of how you can modify it:
+
+Filter on a specific environment and service
+`-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and filter('sf_operation','*')"`
+
+Filter on a specific environment and service, but exclude some endpoints
+`-var="filter=filter('sf_environment', 'my_environment') and filter('sf_service', 'my_demo_service') and not filter('sf_operation','*/healthz')"`
+
 
