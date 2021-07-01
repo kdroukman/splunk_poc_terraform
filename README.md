@@ -49,7 +49,7 @@ $ terraform destroy -var="access_token=abc123" -var="realm=us1"
 
 This script contains a number of different detectors. 
 You can programmatically modify variables specific to each detector, or even change the filter to set up detectors for specific services and operations.
-This can be used to modify your detector conditions. For example
+For example
 
 ```
 terraform apply -var="access_token=abc123" -var="realm=us1" -target=signalfx_detector.error_sudden_change -var="current_window='1m'" -var="historic_window='3h'" -var="fire_growth_percent=0.25" -var="min_requests=15"
