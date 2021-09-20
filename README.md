@@ -14,14 +14,14 @@ $ terraform init --upgrade
 ## Create a workspace (Optional)
 
 ```
-$ terraform workspace new my_workspace
+terraform workspace new my_workspace
 ```
 Where `my_workspace` is the name of your workspace
 
 ## Review the execution plan
 
 ```
-$ terraform plan -var="access_token=abc123" -var="realm=us1"
+terraform plan -var="access_token=abc123" -var="realm=us1"
 ```
 
 Where `access_token` is the Splunk Access Token and `realm` is either `eu0`, `us0`, `us1` or `us2`
@@ -29,7 +29,7 @@ Where `access_token` is the Splunk Access Token and `realm` is either `eu0`, `us
 ## Apply the changes
 
 ```
-$ terraform apply -var="access_token=abc123" -var="realm=us1"
+terraform apply -var="access_token=abc123" -var="realm=us1"
 ```
 
 ## Destroy everything (if you must)
@@ -37,12 +37,12 @@ $ terraform apply -var="access_token=abc123" -var="realm=us1"
 If you created a workspace you will first need to ensure you are in the correct workspace e.g.
 
 ```
-$ terraform workspace select my_workspace
+terraform workspace select my_workspace
 ```
 Where `my_workspace` is the name of your workspace
 
 ```
-$ terraform destroy -var="access_token=abc123" -var="realm=us1"
+terraform destroy -var="access_token=abc123" -var="realm=us1"
 ```
 
 # Programmatically changing detector settings
