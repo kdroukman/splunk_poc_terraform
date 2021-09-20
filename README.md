@@ -8,7 +8,7 @@
 ## Initialise Terraform
 
 ```
-$ terraform init --upgrade
+terraform init --upgrade
 ```
 
 ## Create a workspace (Optional)
